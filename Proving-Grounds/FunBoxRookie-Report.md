@@ -61,6 +61,7 @@ ssh -i id_rsa tom@192.168.99.107
 ![Initial access via SSH](https://i.imgur.com/6QtQwpJ.png)
 
 As proof of exploitation, the tester captured the *local.txt* flag.
+
 ![Redacted user flag](https://i.imgur.com/1p3so0y.png)
 
 ## Privilege Escalation
