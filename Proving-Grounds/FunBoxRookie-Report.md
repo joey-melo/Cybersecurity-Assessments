@@ -27,6 +27,7 @@ The tester recommends patching the vulnerabilities identified during the testing
 ### FTP Enumeration
 Upon manual enumeration of the available FTP service, the tester noticed it had anonymous access enabled which allowed the tester to read all files in the FTP folder.
 The content comprised of multiple password-protected zip files and an encoded message from admin informing that these files contain ssh keys.
+
 ![Directory listing of the FTP server](https://i.imgur.com/2tPQEWh.png)
 
 ## Initial Access
