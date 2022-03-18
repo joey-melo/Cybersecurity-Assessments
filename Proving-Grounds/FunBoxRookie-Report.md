@@ -5,7 +5,7 @@
 - **Host:** 192.168.99.107 (FunBoxRookie)
 
 ## Disclaimer
-The following report is the solution of a challenge in a learning platform that has no association whatsoever with the author. Please consider this report as a rough simulation of what a real pentesting report looks like. Attempting to use the methodologies demonstrated in this report in unauthorized clients is ILLEGAL. The author is not responsible for improper use or unauthorized modifications of this information. The author assumes no liability for the use of information disclosed in this report. Any damage or loss that may result from improper use of the information contained in this report is the sole responsibility of the user and not the author. The author recommends safe practices and an ethical standpoint when working with clients and or with tools demonstrated in this report.
+The following report is the solution of a challenge in a learning platform that has no association whatsoever with the author. Please consider this report as a rough simulation of what a real pentesting report looks like. Attempting to use the methodologies demonstrated in this report in unauthorized networks is ILLEGAL. The author is not responsible for improper use or unauthorized modifications of this information. The author assumes no liability for the use of information disclosed in this report. Any damage or loss that may result from improper use of the information contained in this report is the sole responsibility of the user and not the author. The author recommends safe practices and an ethical standpoint when working with clients and or with tools demonstrated in this report.
 
 ## Introduction
 This penetration test report contains all efforts that were conducted in order to assess the security of Proving Grounds. This report contains all items that were used to penetrate and gain privileged access to the remote host(s). The purpose of this report is to showcase that the tester has a full understanding of penetration testing methodologies as well as the technical knowledge to perform professional cybersecurity assessments.
@@ -62,7 +62,7 @@ ssh -i id_rsa tom@192.168.99.107
 
 As proof of exploitation, the tester captured the *local.txt* flag.
 
-![Redacted user flag](https://i.imgur.com/1p3so0y.png)
+![Redacted user flag](https://i.imgur.com/uAgrFkL.png)
 
 ## Privilege Escalation
 ### Vulnerability Explanation
@@ -91,10 +91,10 @@ As proof of post-exploitation, the tester captured the *proof.txt* flag.
 # Appendix A: Commands Issued
 ```bash
 # Enumeration
-sudo nmap -sC -sV -oN tcp_ports.nmap -p- 192.168.189.107
+sudo nmap -sC -sV -oN tcp_ports.nmap -p- 192.168.99.107
 
 # Get FTP files
-ftp anonymous@192.168.189.107 # blank password
+ftp anonymous@192.168.99.107 # blank password
 ftp> ls -la
 ftp> mget *
 ftp> get .@admins
@@ -108,7 +108,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt
 unzip tom.zip # pwd=iubire
 
 # Initial access
-ssh -i id_rsa tom@192.168.189.107 
+ssh -i id_rsa tom@192.168.99.107 
 pwd; id; cat local.txt; ifconfig
 
 # Privilege escalation
