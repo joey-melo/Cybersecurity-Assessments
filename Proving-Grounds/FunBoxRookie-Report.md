@@ -27,7 +27,7 @@ The tester recommends patching the vulnerabilities identified during the testing
 ### FTP Enumeration
 Upon manual enumeration of the available FTP service, the tester noticed it had anonymous access enabled which allowed the tester to read all files in the FTP folder.
 The content comprised of multiple password-protected zip files and an encoded message from admin informing that these files contain ssh keys.
-<img src="https://imgur.com/a/XgtC3eB">
+![Directory listing of the FTP server](https://i.imgur.com/2tPQEWh.png)
 
 ## Initial Access
 ### Vulnerability Explanation
@@ -48,7 +48,7 @@ The tester was able to decode the *.@admin* message and read its contents, which
 ```bash
 cat .@admins | base64 -d
 ```
-<ss2>
+![Contents of .@admins file](https://i.imgur.com/k5ytUEx.png)
 
 Then, using a simple wordlist, two passwords were cracked. The zip files were extracted and they contained an access key to the SSH server. The tester decided to connect to the *tom* user.
 ```bash
@@ -57,10 +57,10 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt
 unzip tom.zip # pwd=iubire
 ssh -i id_rsa tom@192.168.99.107 
 ```
-<ss3>
+![Initial access via SSH](https://i.imgur.com/6QtQwpJ.png)
 
 As proof of exploitation, the tester captured the *local.txt* flag.
-<user-flag>
+![Redacted user flag](https://i.imgur.com/1p3so0y.png)
 
 ## Privilege Escalation
 ### Vulnerability Explanation
@@ -75,13 +75,13 @@ id
 ls -la
 cat .mysql_history
 ```
-<ss4>
+![Password on .mysql_history](https://i.imgur.com/28yTcb9.png)
 
 The tester then successfully reused the captured password to execute high-privileged commands and obtain a *root* shell.
 ```bash
 sudo su
 ```
-<root-flag>
+![Redacted root flag](https://i.imgur.com/1p3so0y.png)
 
 ## Post-Exploitation
 As proof of post-exploitation, the tester captured the *proof.txt* flag.
