@@ -1,8 +1,8 @@
-# Penetration Test Report for Proving Grounds
-**Author:** Joey Melo
-**Date:** March 18, 2022
-**Client:** Proving Grounds
-**Host:** 192.168.88.15 (NoName)
+# Penetration Test Report for Proving Grounds - NoName
+- **Author:** Joey Melo
+- **Date:** March 18, 2022
+- **Client:** Proving Grounds
+- **Host:** 192.168.88.15 (NoName)
 
 ## Disclaimer
 The following report is the solution of a challenge in a learning platform that has no association whatsoever with the author. Please consider this report as a rough simulation of what a real pentesting report looks like. Attempting to use the methodologies demonstrated in this report in unauthorized clients is ILLEGAL. The author is not responsible for improper use or unauthorized modifications of this information. The author assumes no liability for the use of information disclosed in this report. Any damage or loss that may result from improper use of the information contained in this report is the sole responsibility of the user and not the author. The author recommends safe practices and an ethical standpoint when working with clients and or with tools demonstrated in this report.
@@ -29,7 +29,7 @@ The tester recommends patching the vulnerabilities identified during the testing
 - /admin
 ## Initial Access
 ### Vulnerability Explanation
-The remote HTTP host exposes a passphrase in the source code of the */admin* enpoint. The passphrase reveals a new endpoint, */superadmin.php*, which runs a php application that is vulnerable to remote code execution.
+The remote HTTP host exposes a passphrase in the source code of the */admin* enpoint. The passphrase can be used to extract embedded information in one of the image files stored in the website, which reveals a new endpoint, */superadmin.php*, which runs a php application that is vulnerable to remote code execution.
 ### Vulnerability Fix
 Do not store passwords or passphrases in html comments. Harden input sanitization rules in the php form in the */superadmin* endopint to avoid rce.
 ### Attack Walkthrough
@@ -54,7 +54,7 @@ cat imp.txt | base64 -d
 
 ![/superadmin.php endpoint](https://imgur.com/6DQZnNo.png)
 
-Accessing the secret endpoint revealed a php form which was executing the *ping* command. Although some filtering was in place, the tester was able to bypass the filter by prepending the pipe (*|*) character to execute code and enumerate the system.
+Accessing the secret endpoint revealed a php form which was executing the *ping* command. Although some filtering was in place, the tester was able to bypass the filter by prepending the pipe (|) character to execute code and enumerate the system.
 ```bash
 | id
 | cat superadmin.php
@@ -62,7 +62,7 @@ Accessing the secret endpoint revealed a php form which was executing the *ping*
 
 ![Source code of superadmin.php](https://imgur.com/ZkrQvbA.png)
 
-The source code revealed that a list of words were filtered, including the backslash (*/*); however, the filtering was insufficient as the tester easily bypassed it issuing the following command:
+The source code revealed that a list of words were filtered, including the backslash (/); however, the filtering was insufficient as the tester easily bypassed it issuing the following command:
 ```bash
 | cat $(echo . | tr '!-0' '"-1')etc$(echo . | tr '!-0' '"-1')passwd
 
