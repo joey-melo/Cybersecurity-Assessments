@@ -6,3 +6,4 @@
   * [NoName](Proving-Grounds/NoName-Report.md)
   * [Sar](Proving-Grounds/Sar-Report.md)
   * [Ha-natraj](Proving-Grounds/Ha-natraj-Report.md)
+  * [OnSystemShellDredd](Proving-Grounds/OnSystemShellDredd-Report.md)
