@@ -8,3 +8,4 @@
   * [Ha-natraj](Proving-Grounds/Ha-natraj-Report.md)
   * [OnSystemShellDredd](Proving-Grounds/OnSystemShellDredd-Report.md)
   * [Djinn3](Proving-Grounds/Djinn3-Report.md)
+  * [Shakabrah](Proving-Grounds/Shakabrah-Report.md)
