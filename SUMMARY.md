@@ -10,5 +10,5 @@
   * [Djinn3](Proving-Grounds/Djinn3-Report.md)
   * [Shakabrah](Proving-Grounds/Shakabrah-Report.md)
   * [Assertion101](Proving-Grounds/Assertion101-Report.md)
-
-*[Pico CTF 2022](PicoCTF-2022/basic-file-exploit.md)
+* [Pico CTF 2022](PicoCTF-2022/README.md)
+  * [basic-file-exploit](PicoCTF-2022/basic-file-exploit.md)
