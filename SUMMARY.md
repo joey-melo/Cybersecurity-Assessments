@@ -20,3 +20,5 @@
   * [file-run1](PicoCTF-2022/file-run1.md)
   * [file-run2](PicoCTF-2022/file-run2.md)
   * [File types](PicoCTF-2022/file-types.md)
+  * [Includes](PicoCTF-2022/includes.md)
+  * [Local Authority](PicoCTF-2022/local-authority.md)
