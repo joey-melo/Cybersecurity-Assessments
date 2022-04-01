@@ -17,3 +17,4 @@
   * [buffer overflow 0](PicoCTF-2022/buffer-overflow-0.md)
   * [credstuff](PicoCTF-2022/credstuff.md)
   * [Enhance!](PicoCTF-2022/enhance.md)
+  * [file-run1](PicoCTF-2022/file-run1.md)
