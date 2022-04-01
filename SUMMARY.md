@@ -22,3 +22,4 @@
   * [File types](PicoCTF-2022/file-types.md)
   * [Includes](PicoCTF-2022/includes.md)
   * [Local Authority](PicoCTF-2022/local-authority.md)
+  * [Lookey here](PicoCTF-2022/lookey-here.md)
