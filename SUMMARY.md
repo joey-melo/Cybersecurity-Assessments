@@ -24,3 +24,4 @@
   * [Local Authority](PicoCTF-2022/local-authority.md)
   * [Lookey here](PicoCTF-2022/lookey-here.md)
   * [morse-code](PicoCTF-2022/morse-code.md)
+  * [Packets Primer](PicoCTF-2022/packets-primer.md)
