@@ -32,3 +32,4 @@
   * [Search source](PicoCTF-2022/search-source.md)
   * [substitution0](PicoCTF-2022/substitution0.md)
   * [substitution1](PicoCTF-2022/substitution1.md)
+  * [substitution2](PicoCTF-2022/substitution2.md)
