@@ -27,3 +27,4 @@
   * [Packets Primer](PicoCTF-2022/packets-primer.md)
   * [patchme.py](PicoCTF-2022/patchme-py.md)
   * [rail-fence](PicoCTF-2022/rail-fence.md)
+  * [Redaction gone wrong](PicoCTF-2022/redaction-gone-wrong.md)
