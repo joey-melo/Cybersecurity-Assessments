@@ -29,3 +29,4 @@
   * [rail-fence](PicoCTF-2022/rail-fence.md)
   * [Redaction gone wrong](PicoCTF-2022/redaction-gone-wrong.md)
   * [Safe opener](PicoCTF-2022/safe-opener.md)
+  * [Search source](PicoCTF-2022/search-source.md)
