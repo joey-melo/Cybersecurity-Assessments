@@ -35,3 +35,4 @@
   * [substitution2](PicoCTF-2022/substitution2.md)
   * [transposition-trial](PicoCTF-2022/transposition-trial.md)
   * [unpackme.py](PicoCTF-2022/unpackme-py.md)
+  * [bloat.py](PicoCTF-2022/bloat-py.md)
