@@ -37,3 +37,4 @@
   * [unpackme.py](PicoCTF-2022/unpackme-py.md)
   * [bloat.py](PicoCTF-2022/bloat-py.md)
   * [buffer overflow 1](PicoCTF-2022/buffer-overflow-1.md)
+  * [Power Cookie](PicoCTF-2022/power-cookie.md)
