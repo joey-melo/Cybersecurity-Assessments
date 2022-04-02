@@ -30,3 +30,4 @@
   * [Redaction gone wrong](PicoCTF-2022/redaction-gone-wrong.md)
   * [Safe opener](PicoCTF-2022/safe-opener.md)
   * [Search source](PicoCTF-2022/search-source.md)
+  * [substitution0](PicoCTF-2022/substitution0.md)
