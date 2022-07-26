@@ -39,4 +39,5 @@
   * [buffer overflow 1](PicoCTF-2022/buffer-overflow-1.md)
   * [Power Cookie](PicoCTF-2022/power-cookie.md)
   * [Roboto Sans](PicoCTF-2022/roboto-sans.md)
-* [Notes](Notes/Checklist.md)
+* [Notes](notes/README.md)
+  * [Checklist](notes/checklist.md)
