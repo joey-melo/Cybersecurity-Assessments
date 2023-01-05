@@ -1,12 +1,16 @@
+---
+description: >-
+  “The more I learn, the more I realize how much I don't know.” (Albert
+  Einstein)
+---
+
 # Joey Melo's Blog
 
-Welcome. I'm Joey Melo, a junior penetration tester with a passion for ethical hacking.
+Welcome to my blog. I am Joey Melo, an OSCP-certified penetration tester passionate about ethical hacking. On this blog, you will find a collection of writeups and notes documenting my successes and challenges in various CTFs and real-world penetration testing engagements. Some writeups are produced in a technical report style to demonstrate how reporting works in the industry. &#x20;
 
-After I failed my first attempt at OSCP, I decided to create this blog to register my CTF attempts and practice writing reports.
-The writeups I post will have the format of a technical pentesting report. The purpose of this style is to aid students to write their own technical reports as well as to showcase aspiring pentesters how the industry works. The reporting style is heavily based on the [Offsensive Security's template](https://www.offensive-security.com/pwk-online/PWK-Example-Report-v1.pdf)
+As a professional in the field, I strive to provide high-quality content that is both informative and engaging. Whether you are an aspiring pentester looking to improve your skills or a recruiter searching for top talent, I believe you will find value in my work.
 
-For those looking for quick writeups on a part you're stuck, just look at the Appendix A: Commands Issued of the report and that should clarify the path taken to exploit the machine.
+In addition to my OSCP certification, I have a strong foundation in various tools and techniques, including network analysis, vulnerability assessment, and exploitation. I am constantly learning and staying up-to-date with the latest developments in the industry. Thank you for visiting and I hope you enjoy my content.
 
-If you like the content or have any suggestions, feel free to reach out to me at any of my social medias:
 * [Twitter](https://twitter.com/MrJoeyMelo)
 * [Linkedin](https://www.linkedin.com/in/mrjoeymelo/)
